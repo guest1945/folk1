@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ <script src="http://mattstow.com/experiment/responsive-image-maps/jquery.rwdImageMaps.min.js"></script>
+    <script>
+        $(function(){
+	$('img[usemap]').rwdImageMaps();
+	$("#img").width("100%");
+});
+    </script>
+    <style>
+      img:not(.origin) {
+          width:80%;
+          display:block;
+          margin:auto;
+          
+      }
+      .origin {
+          display:inline-block;
+
+      }
+      
+
+      p {
+          text-align: center;
+      }
+      a:link {
+        text-decoration: none;
+      }
+      * {margin:0;padding:0;}
+
+
+	.section input[id*="slide"] {display:none;}
+
+
+	.section .slidewrap {max-width:1200px;margin:0 auto;overflow:hidden;}
+	.section .slidelist {white-space:nowrap;font-size:0;}
+	.section .slidelist > li {display:inline-block;vertical-align:middle;width:100%;transition:all .5s;}
+	.section .slidelist > li > a {display:block;position:relative;}
+	.section .slidelist > li > a img {width:100%;}
+
+	.section .slidelist label {position:absolute;z-index:1;top:50%;transform:translateY(-50%);padding:50px;cursor:pointer;}
+	.section .slidelist .left {left:30px;background:url('./img/left.png') center center / 100% no-repeat;}
+	.section .slidelist .right {right:30px;background:url('./img/right.png') center center / 100% no-repeat;}
+
+	
+	.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+    .section input[id="slide04"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide05"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide06"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+    .section input[id="slide07"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+	.section input[id="slide08"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+	.section input[id="slide09"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+    </style>
+    <body>
+        <img src="folkimge/folk4.jpg">
+        <img src="folkimge/map.jpg" usemap="#onM" name="trad">
+        <map name="onM">
+            <area shape="circle" coords="228,430,20" href="#a3"  onmouseover="if(document.images) trad.src='folkimge/world.jpg'"  onmouseout="if(document.images) trad.src='folkimge/map.jpg'"  >
+            <area shape="circle" coords="238,236,20" href="#a1"  onmouseover="if(document.images) trad.src='folkimge/og.jpg'"  onmouseout="if(document.images) trad.src='folkimge/map.jpg'"  >
+            <area shape="circle" coords="730,360,20" href="#a2"  onmouseover="if(document.images) trad.src='folkimge/trad.jpg'"  onmouseout="if(document.images) trad.src='folkimge/map.jpg'"  >
+        </map>
+        <span style="line-height: 300px;"><br></span>
+        <div id="a1">
+            <h1 style="text-align:center" >
+                옹기전시관
+            </h1>
+            <div class="section">
+                <input type="radio" name="slide" id="slide01" checked>
+                <input type="radio" name="slide" id="slide02">
+                <input type="radio" name="slide" id="slide03">
+        
+                <div class="slidewrap">
+                    <ul class="slidelist">
+                        <li>
+                            <a>
+                                <label for="slide03" class="left"></label>
+                                <img src="folkimge/og1.jpg" >
+                                <label for="slide02" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide01" class="left"></label>
+                                <img src="folkimge/og2.jpg">
+                                <label for="slide03" class="right"></label>
+                            </a>
+                        </li>
+                        <li>
+                            <a>
+                                <label for="slide02" class="left"></label>
+                                <img src="folkimge/og3.jpg">
+                                <label for="slide01" class="right"></label>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p>한국민속촌 옹기전시관에서는 조상들의 지혜를 엿볼 수 있는 옹기들을 한 자리에서 볼 수 있습니다. </p><br>
+             <p>   삼국시대부터 만들어온 옹기는 우리 조상들의 전통생활과 밀접하게 연관되어 다양하게 사용되었으며,</p><br> 
+              <p>  민화와 문양 등 예술미까지 느낄 수 있는 작품으로도 손색이 없습니다. </p><br>
+               <p> 자연 그대로의 여유와 풍요로움을 담은 옹기를 직접 만들어 볼 수 있는 옹기체험관도 있어 가족 및 단체, 외국인 관람객들이 좋아하는 장소입니다.</p> <br>
+               <h3 style="text-align: center;"> 물레 체험</h3>
+               <p>꽃병, 필통, 컵, 밥공기, 국 대접, 투가리, 떡시루 등을 
+                직접 물레로 만든 후 글이나 그림을 새길 수 있으며, 가마에 구워 택배로
+                보내드립니다.</p> <br>
+               <P style="text-align:center;"><strong >옹기 만들기 체험</strong> <span style="border:solid 1px rgb(245, 125, 12);color:rgb(245, 125, 12)" >유료</span> <span> 체험비:15000원, 택배비 3000원</span>  </P>
+        </div>
+        <span style="line-height: 300px;"> <br>  </span>
+        <div id="a2">
+            <h1 style="text-align:center"  >
+                전통민속관
+            </h1>
+            
+	<div class="section">
+		<input type="radio" name="slide" id="slide04" checked>
+		<input type="radio" name="slide" id="slide05">
+		<input type="radio" name="slide" id="slide06">
+
+		<div class="slidewrap">
+			<ul class="slidelist">
+				<li>
+					<a>
+						<label for="slide06" class="left"></label>
+						<img src="folkimge/trad2.jpg">
+						<label for="slide05" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide04" class="left"></label>
+						<img src="folkimge/trad1.jpg">
+						<label for="slide06" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide05" class="left"></label>
+						<img src="folkimge/trad3.jpg">
+						<label for="slide04" class="right"></label>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+            <p>전통민속관에서는 조선시대 후기 경기도 용인 땅에서 농사를 지으며 살았던 4대 가족의 연중생활을 사계절, 24절기 중심으로 태어나서 죽을 때까지의 일생의례를 생동감 있게 연출하여 전시하고 있습니다.</p> <br>
+            <p>전통민속관은 우리의 전통문화를 보다 쉽게 배우고 체험할 수 있는 전시관으로 관람객들에게 사랑 받고 있습니다.</p><br>
+
+            <p>    전통민속관은 전통 민속박물관의 준말로 야외에서 재현하고 전시하기 어려웠던 세시풍속과 관혼상제, 의식주생활, 민속놀이 등을 디오라마 (축소모형), 움직이는 인형과 모형, 재미있는 만화와 옛 그림, 옛 사진, 유물전시를 통해서 보여주고 있습니다.</p><br>
+                
+               <p> 생업도구와 같은 유형의 물질자료, 농요와 같은 구비전승자료, 놀이와 같은 행위전승 자료를 적재적소에 배치하여 그 의미와 기능을 온전하게 해석하고 총체적으로 재현·전시한 점이 특징입니다.</p>
+        </div>
+        <span style="line-height: 300px;"> <br>  </span>
+        <div id="a3">
+            <h1 style="text-align: center;">세계민속관</h1>
+            
+	<div class="section">
+		<input type="radio" name="slide" id="slide07" checked>
+		<input type="radio" name="slide" id="slide08">
+		<input type="radio" name="slide" id="slide09">
+
+		<div class="slidewrap">
+			<ul class="slidelist">
+				<li>
+					<a>
+						<label for="slide09" class="left"></label>
+						<img src="folkimge/world1.jpg">
+						<label for="slide08" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide07" class="left"></label>
+						<img src="folkimge/world2.jpg">
+						<label for="slide09" class="right"></label>
+					</a>
+				</li>
+				<li>
+					<a>
+						<label for="slide08" class="left"></label>
+						<img src="folkimge/world3.jpg">
+						<label for="slide07" class="right"></label>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+    <P>한국민속촌 세계민속관은 2001년 9월 22일 처음 개관해 9개동의 상설전시 공간으로 구성되어있습니다. 5대양 6대주에서 수집한 3,000여 점의 문화유산을 보유하고 있으며. </P> <br>
+
+        <p>각 문화권마다 마련된 전시관을 통해 각 국의 의식주 생활과 생업기술, 문화예술을 쉽게 만나볼 수 있습니다.</P> <br>
+     
+        </div>
+        <div style=" height:100px; border:solid 1px  gray; border-left: white ; border-right-color:white ; border-bottom: white; ">
+            <br>
+            <br>
+            <span style=" color:  gray; margin-left: auto; margin-right: auto; display:table;">
+                경기도 용인시 기흥구 민속촌로 90 한국민속촌  TEL 031. 288.0000 FAX. 031. 286. 4051  
+               <a href="https://www.facebook.com/koreanfolkvillage"> <img class="origin" src="folkimge/util_facebook2.gif">  </a>  
+                <a href="https://twitter.com/koreanfolk"> <img class="origin" src="folkimge/util_twitter2.gif">  </a>
+                 <a  href="https://blog.naver.com/kfv1974"><img class="origin" src="folkimge/util_blog2.gif">     </a>
+                  </span>
+           
+        </div>
+    </body>
+</html>
